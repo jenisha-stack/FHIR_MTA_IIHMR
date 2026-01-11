@@ -1,24 +1,12 @@
-Source System: RMHC Legacy CSV  
-Target System: FHIR Transaction Bundle
+# Source to Target Mapping (STM)
 
-Mapping:
-
-CSV Field → FHIR Element
-
-patient_id → Patient.identifier  
-patient_name → Patient.name.text  
-gender → Patient.gender  
-phone → Patient.telecom  
-address → Patient.address.text  
-
-height_cm → Observation (Body Height)  
-weight_kg → Observation (Body Weight)  
-waist_cm → Observation (Waist Circumference)  
-hip_cm → Observation (Hip Circumference)  
-
-Derived:
-BMI = weight / (height in meters²)  
-WHR = waist / hip  
-
-All mapped resources are wrapped in a single Transaction Bundle
-to guarantee atomicity.
+| Legacy CSV Column | Description              | FHIR Resource | FHIR Element                   |
+|------------------|--------------------------|--------------|------------------------------|
+| patient_id       | Legacy patient identifier| Patient      | Patient.id                   |
+| first_name       | First name               | Patient      | Patient.name.given           |
+| last_name        | Last name                | Patient      | Patient.name.family          |
+| gender           | M/F values               | Patient      | Patient.gender               |
+| dob              | Date of birth            | Patient      | Patient.birthDate            |
+| obs_code         | Observation code         | Observation  | Observation.code.text        |
+| obs_value        | Observation value        | Observation  | Observation.valueQuantity    |
+| obs_date         | Observation date         | Observation  | Observation.effectiveDateTime|
