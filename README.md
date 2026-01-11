@@ -31,3 +31,10 @@ This guarantees that:
 
 ## Project Structure
 
+### Translator
+
+The Translator layer converts legacy RMHC CSV data into FHIR-compliant Transaction Bundles using a Python-based migration script.
+
+A sample input CSV and the corresponding FHIR Transaction Bundle output are provided to demonstrate end-to-end data migration.
+
+
