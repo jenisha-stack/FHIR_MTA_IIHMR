@@ -1,0 +1,54 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-1",
+        "identifier": [
+          {
+            "system": "http://rmhc.org/sid/policy-id",
+            "value": "RMHC001"
+          }
+        ],
+        "name": [
+          {
+            "given": ["Asha"],
+            "family": "Kumar"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998-04-12"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-1",
+        "status": "final",
+        "code": {
+          "text": "Blood Pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-1"
+        },
+        "effectiveDateTime": "2026-01-10",
+        "valueQuantity": {
+          "value": 120,
+          "unit": "mmHg"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    }
+  ]
+}
