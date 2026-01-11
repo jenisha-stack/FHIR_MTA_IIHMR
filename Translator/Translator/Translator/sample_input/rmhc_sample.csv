@@ -1,0 +1,3 @@
+patient_id,first_name,last_name,gender,dob,obs_code,obs_value,obs_date
+AND0010888,THIRAVIDAMANI,NA,F,1965-05-12,HEIGHT,159,2013-02-07
+AND0010888,THIRAVIDAMANI,NA,F,1965-05-12,WEIGHT,83,2013-02-07
