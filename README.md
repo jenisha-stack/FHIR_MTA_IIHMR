@@ -1,7 +1,6 @@
-# FHIR Migration Translation Architecture (MTA)
+# Mid-Term Assessment (MTA): FHIR Migration Translation Architecture
 
-This repository demonstrates a Warehouse-based architecture for migrating
-legacy healthcare data into FHIR using a three-layer model:
+This repository is submitted as part of the Mid-Term Assessment (MTA) and demonstrates a FHIR Migration Translation Architecture using a Warehouse-based, three-layer model:
 
 Infrastructure → Rulebook → Translator
 
